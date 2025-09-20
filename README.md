@@ -61,15 +61,11 @@ This pipeline allows businesses to:
 ## 📂 Repository Structure  
 ```plaintext
 .
-├── sql/
-│   └── 01_customer_segmentation_pipeline.sql
-│
+├── CSA.sql 
 ├── outputs/
 │   ├── final_customer_segments.csv
 │   ├── segment_summary_analysis.csv
 │   ├── customer_rfm_scores.csv
 │   ├── intermediate_order_values.csv
 │   └── bi_view_customer_segments.csv
-│
-├── .gitignore
 └── README.md
