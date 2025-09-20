@@ -1,0 +1,8 @@
+segment_name,customer_count,avg_spend,avg_freq,avg_recency
+"Potential Loyalists",31174,2.84,1.00,180
+Other,25629,3.11,1.03,306
+"Loyal Customers",15210,2.14,1.07,55
+"At-Risk Customers",14930,3.50,1.07,494
+"New Customers",2636,3.05,1.00,89
+Champions,2596,8.55,1.14,45
+"Lost Customers",2224,3.36,1.00,397
