@@ -61,11 +61,11 @@ This pipeline allows businesses to:
 ## 📂 Repository Structure  
 ```plaintext
 .
-├── CSA.sql 
-├── outputs/
-│   ├── final_customer_segments.csv
-│   ├── segment_summary_analysis.csv
-│   ├── customer_rfm_scores.csv
-│   ├── intermediate_order_values.csv
-│   └── bi_view_customer_segments.csv
-└── README.md
+├── CSA.sql                      # The complete end-to-end SQL pipeline script.
+├── outputs/                     # Folder containing all exported CSV results from the analysis.
+│   ├── final_customer_segments.csv  # Main deliverable: The final segment assigned to each customer.
+│   ├── segment_summary_analysis.csv # High-level business summary of each segment's value and size.
+│   ├── customer_rfm_scores.csv      # The underlying RFM (Recency, Frequency, Monetary) scores.
+│   ├── intermediate_order_values.csv  # The cleaned transaction data (ETL output) used for the model.
+│   └── bi_view_customer_segments.csv  # A clean data export ready for BI tools like Tableau or Power BI.
+└── README.md                    # Project overview, setup instructions, and key findings.
