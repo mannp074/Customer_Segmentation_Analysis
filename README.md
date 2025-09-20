@@ -12,7 +12,7 @@ I designed and deployed a **complete ETL and customer segmentation system** enti
 ---
 
 <p align="center">
-  <img src="outputs/customer-segmentation-dashboard.png" alt="Customer Segmentation Dashboard" width="800"/>
+  <img src="outputs/POWERBI_dashboard.png" alt="Customer Segmentation Dashboard" width="800"/>
 </p>
 
 ---
