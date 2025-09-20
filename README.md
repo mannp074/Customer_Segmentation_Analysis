@@ -1,2 +1,68 @@
-# customer-segmentation-analysis
-A complete customer segmentation solution using MySQL 8. Includes data ingestion, ETL, RFM model development, automated segmentation via stored procedures, and BI integration for actionable insights on 90K+ customers.
+# End-to-End Customer Segmentation Pipeline using MySQL  
+
+## 📌 Executive Summary  
+This project demonstrates the development of a **fully automated customer segmentation pipeline** using **MySQL 8** on the Olist e-commerce dataset.  
+
+### Business Problem  
+Without segmentation, marketing campaigns are generic and inefficient. The objective was to create a **data-driven framework** that empowers personalized marketing, improves customer retention, and increases lifetime value.  
+
+### Solution  
+I designed and deployed a **complete ETL and customer segmentation system** entirely in SQL. The pipeline ingests raw transactional data, applies an **RFM (Recency, Frequency, Monetary) model**, and outputs actionable customer segments for downstream BI and marketing activation.  
+
+---
+
+## ⚙️ Tech Stack  
+- **Database:** MySQL 8  
+- **Language:** SQL (CTEs, Window Functions, Stored Procedures, Events)  
+- **Tools:** MySQL Workbench / CLI  
+
+---
+
+## 🔄 Project Workflow  
+
+### **Phase 1: Data Ingestion & Schema Design**  
+- Loaded 8 raw CSV files (customers, orders, payments, products, etc.) into a relational schema.  
+- Designed staging tables to ensure data integrity during ingestion.  
+
+### **Phase 2: Data Transformation (ETL)**  
+- Created a canonical `order_values` table by cleaning & aggregating raw transactional data.  
+- Engineered a customer-level **RFM data model** with metrics:  
+  - **Recency:** Days since last purchase  
+  - **Frequency:** Number of distinct orders  
+  - **Monetary:** Total lifetime spend  
+
+### **Phase 3: RFM Scoring & Segmentation**  
+- Applied **NTILE() window functions** to assign scores (1–5) for R, F, and M.  
+- Classified customers into **6 actionable segments** using CASE logic:  
+  - Champions, Loyal Customers, Potential Loyalists, New Customers, At-Risk, Lost Customers  
+
+### **Phase 4: Productionalization & Automation**  
+- Encapsulated the entire pipeline into a **Stored Procedure** (`CALL refresh_customer_segments();`).  
+- Scheduled monthly execution using **MySQL Events** for hands-free updates.  
+- Created **BI-ready Views** (`vw_customer_segments`, `vw_customer_rfm`) for Tableau/Power BI integration.  
+
+---
+
+## 📊 Key Outcomes  
+- **Automated segmentation pipeline** with monthly refreshes.  
+- Final **customer_segments table** covering 90,000+ customers.  
+- Business deliverables: Strategic recommendations + sample personalized campaigns.  
+
+---
+
+## 🚀 Business Impact  
+This pipeline allows businesses to:  
+- Run **data-driven, personalized marketing campaigns**.  
+- Track **customer lifecycle health** (retention, churn, growth).  
+- Integrate directly with BI dashboards for **real-time decision-making**.  
+
+---
+
+## 📂 Repository Structure  
+```plaintext
+├── data/                # Sample input datasets (mocked or anonymized)  
+├── sql_scripts/         # ETL, RFM scoring, segmentation logic  
+├── procedures/          # Stored procedure for automation  
+├── views/               # BI-ready SQL views  
+├── docs/                # Project documentation & recommendations  
+└── README.md            # Project overview (this file)  
